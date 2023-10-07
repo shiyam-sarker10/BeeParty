@@ -1,10 +1,13 @@
+import Banner from "../Components/Banner/Banner";
+import OurPromise from "../Components/OurPromise/OurPromise";
 
 
 const Home = () => {
     return (
-        <div>
-            This is home page
-        </div>
+      <div className="home-bg">
+        <Banner></Banner>
+        <OurPromise></OurPromise>
+      </div>
     );
 };
 

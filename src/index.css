@@ -1,3 +1,31 @@
-  @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.font-custom {
+ font-family: 'Chewy', cursive;
+}
+.font-title{
+  font-family: 'Concert One', cursive;
+}
+.banner-img {
+   background-image: linear-gradient(rgba(222, 155, 10, 0.5), rgba(222, 155, 10, 0.5)), url('../src/assets/banner.avif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  height: 75vh;
+}
+
+.border-custom {
+  border-bottom-right-radius: 20%;
+  border-bottom-left-radius: 50%;
+
+}
+.home-bg{
+  background-image: url('./assets/bg1.png');
+  height: 100%;
+
+}
+
+
