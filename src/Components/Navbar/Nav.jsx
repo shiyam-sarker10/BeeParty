@@ -123,7 +123,7 @@ const Nav = () => {
                 <li>
                   <button
                     type="button"
-                    className="text-white hidden md:inline-block bg-[#FEBF05] hover:bg-[#FEBF05] focus:ring-4 focus:outline-none focus:ring-[#FEBF05]/40 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-[#FEBF05] dark:hover:bg-[#FEBF05] dark:focus:ring-[#FEBF05]/70"
+                    className="text-white  hidden md:inline-block bg-[#FEBF05] hover:bg-[#FEBF05] focus:ring-4 focus:outline-none focus:ring-[#FEBF05]/40 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-[#FEBF05] dark:hover:bg-[#FEBF05] dark:focus:ring-[#FEBF05]/70"
                     onClick={toggleMenu}
                   >
                     Login

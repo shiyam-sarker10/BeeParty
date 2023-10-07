@@ -25,7 +25,7 @@ const Banner = () => {
               }{" "}
               dream event to life
             </h1>
-            <h4 className=" font-semibold  w-full md:w-1/3 text-white tracking-wider text-lg">
+            <h4 className=" font-semibold text-base  w-full md:w-1/3 text-white tracking-wider text-base lg:text-lg">
               Transform birthdays with unforgettable themes, decorations, and
               magical moments for kids.
             </h4>

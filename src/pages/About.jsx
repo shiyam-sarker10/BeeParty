@@ -1,9 +1,12 @@
+import OurHistory from "../Components/OurHistory/OurHistory";
+import WhoWeAre from "../Components/whoWeAre/WhoWeAre";
 
 
 const About = () => {
     return (
-        <div>
-            This is about
+        <div className="home-bg">
+            <WhoWeAre></WhoWeAre>
+            <OurHistory></OurHistory>
         </div>
     );
 };
