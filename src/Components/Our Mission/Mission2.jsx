@@ -8,7 +8,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
-const Mission = () => {
+const Mission2 = () => {
     return (
       <div className="w-[32rem]">
         <Timeline className="text-[#FEBF05] ">
@@ -21,7 +21,7 @@ const Mission = () => {
                 color="blue-gray"
                 className="leading-none text-[#FEBF05]"
               >
-                Birthday Bliss
+                Lasting Smiles
               </Typography>
             </TimelineHeader>
             <TimelineBody className="pb-8">
@@ -30,8 +30,8 @@ const Mission = () => {
                 color="gary"
                 className="font-normal text-gray-600"
               >
-                Our mission is to create moments of pure joy, making every
-                birthday celebration a blissful memory to cherish.
+                Our goal is to bring lasting smiles to the faces of children by
+                orchestrating birthday parties filled with laughter and wonder.
               </Typography>
             </TimelineBody>
           </TimelineItem>
@@ -44,7 +44,7 @@ const Mission = () => {
                 color="blue-gray"
                 className="leading-none text-[#FEBF05]"
               >
-                Imaginative Creations
+                Personalized Perfection
               </Typography>
             </TimelineHeader>
             <TimelineBody className="pb-8">
@@ -53,9 +53,9 @@ const Mission = () => {
                 color="gary"
                 className="font-normal text-gray-600"
               >
-                We are committed to crafting imaginative and unforgettable
-                birthday experiences that ignite the imagination of children and
-                parents alike.
+                We believe in the power of personalization, tailoring each
+                birthday event to match the unique dreams and desires of our
+                clients.
               </Typography>
             </TimelineBody>
           </TimelineItem>
@@ -67,7 +67,7 @@ const Mission = () => {
                 color="blue-gray"
                 className="leading-none text-[#FEBF05]"
               >
-                Stress-Free Celebrations
+                Creating Magic
               </Typography>
             </TimelineHeader>
             <TimelineBody>
@@ -76,9 +76,9 @@ const Mission = () => {
                 color="gary"
                 className="font-normal text-gray-600"
               >
-                We strive to take the stress out of birthday planning, so
-                parents can relax and enjoy the celebration with their little
-                ones.
+                Our mission is to create magical moments that will be etched in
+                the hearts of children, leaving them with cherished memories for
+                a lifetime.
               </Typography>
             </TimelineBody>
           </TimelineItem>
@@ -87,4 +87,4 @@ const Mission = () => {
     );
 };
 
-export default Mission;
+export default Mission2;

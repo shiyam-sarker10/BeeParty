@@ -42,8 +42,8 @@ const OurHappyParents = () => {
             </div>
             <div data-aos="fade-down" className="shadow-md rounded-xl">
               <div className="bg-[#F6F6F6] tracking-wider rounded-t-xl text-gray-500 font-custom text-xl p-10">
-                Beeparty made our childs birthday unforgettable! The attention
-                to detail and creative ideas were exceptional.
+                We&apos;re grateful for  stress-free planning.
+                They exceeded our expectations, 
               </div>
               <div className=" bg-white rounded-b-xl p-5 flex justify-center items-center">
                 <div className="flex gap-x-6 items-center">
@@ -59,10 +59,10 @@ const OurHappyParents = () => {
                 </div>
               </div>
             </div>
-            <div data-aos="fade-left" className="shadow-md rounded-xl">
+            <div data-aos="fade-right" className="shadow-md rounded-xl">
               <div className="bg-[#F6F6F6] tracking-wider rounded-t-xl text-gray-500 font-custom text-xl p-10">
-                Beeparty made our childs birthday unforgettable! The attention
-                to detail and creative ideas were exceptional.
+                Exceptional service! Beeparty&apos;s team ensured everything ran
+                smoothly. Our child&apos;s birthday was a hit
               </div>
               <div className=" bg-white rounded-b-xl p-5 flex justify-center items-center">
                 <div className="flex gap-x-6 items-center">

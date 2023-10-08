@@ -1,5 +1,6 @@
-import React from 'react';
+
 import Mission from './Mission';
+import Mission2 from './Mission2';
 
 const OurMission = () => {
     return (
@@ -17,7 +18,13 @@ const OurMission = () => {
             <h2 className="font-title font-bold text-3xl md:text-4xl lg:text-5xl text-center w-full md:w-1/2 mx-auto  text-gray-900">
               We have a mission to make every kid smile
             </h2>
-            <Mission></Mission>
+            <div
+              data-aos="fade-up"
+              className=" flex flex-wrap justify-between items-center py-20"
+            >
+              <Mission data-aos="fade-right"></Mission>
+              <Mission2 data-aos="fade-left"></Mission2>
+            </div>
           </div>
         </div>
       </div>

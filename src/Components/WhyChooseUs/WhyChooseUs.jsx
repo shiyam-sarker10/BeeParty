@@ -65,7 +65,7 @@ const WhyChooseUs = () => {
                 </button>
               </div>
               <div
-                data-aos="fade-left"
+                data-aos="fade-right"
                 className=" bg-[#f6f6f6] shadow-md space-y-4 p-10 rounded-xl flex flex-col justify-center items-center"
               >
                 <div className="bg-white p-5 rounded-full flex justify-center items-center">

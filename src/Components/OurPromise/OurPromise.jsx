@@ -19,7 +19,7 @@ const OurPromise = () => {
               alt="This is an image"
             />
           </div>
-          <div data-aos="fade-up-left" className=" space-y-4 w-full md:w-[50%]">
+          <div data-aos="fade-up-right" className=" space-y-4 w-full md:w-[50%]">
             <h2 className="text-center md:text-right font-title font-bold text-5xl md:w-[80%]">
               There’s nothing more magical than a child’s imagination
             </h2>

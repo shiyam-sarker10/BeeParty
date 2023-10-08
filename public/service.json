@@ -1,0 +1,95 @@
+[
+  {
+    "id": 1,
+    "name": "Basic Birthday Package",
+    "price": "$299.99",
+    "recommendedFor": "10-15 participants",
+    "includedServices": [
+      "Standard Decoration",
+      "Classic Birthday Cake",
+      "Party Favors"
+    ],
+    "description": "A simple and budget-friendly package designed for a small gathering. It includes standard decoration, a classic birthday cake, and party favors to add a special touch to your celebration.",
+    "detailed_description": "A simple and budget-friendly package designed for a small gathering. It includes standard decoration, a classic birthday cake, and party favors to add a special touch to your celebration.",
+    "image": "https://i.ibb.co/G2PXqn7/bronze.png"
+  },
+  {
+    "id": 2,
+    "name": "Deluxe Birthday Package",
+    "price": "$599.99",
+    "recommendedFor": "15-20 participants",
+    "includedServices": [
+      "Premium Decoration",
+      "Customized Birthday Cake",
+      "Entertainment (e.g., Magician or Clown)",
+      "Party Favors"
+    ],
+    "description": "Elevate your celebration with our Deluxe Birthday Package. It includes premium decoration, a customized birthday cake, entertainment options like a magician or clown, and party favors to create unforgettable memories.",
+    "detailed_description": "Elevate your celebration with our Deluxe Birthday Package. It includes premium decoration, a customized birthday cake, entertainment options like a magician or clown, and party favors to create unforgettable memories.",
+    "image": "https://i.ibb.co/gVhjxgR/silver.png"
+  },
+  {
+    "id": 3,
+    "name": "Themed Birthday Extravaganza",
+    "price": "$999.99",
+    "recommendedFor": "20-30 participants",
+    "includedServices": [
+      "Themed Decoration",
+      "Elaborate Birthday Cake",
+      "Costume Characters",
+      "Games and Activities",
+      "Party Favors"
+    ],
+    "description": "Immerse yourself in a themed world with our Themed Birthday Extravaganza. This package features themed decoration, an elaborate birthday cake, costume characters, engaging games and activities, and party favors to make...",
+    "detailed_description": "Immerse yourself in a themed world with our Themed Birthday Extravaganza. This package features themed decoration, an elaborate birthday cake, costume characters, engaging games and activities, and party favors to make your birthday unforgettable.",
+    "image": "https://i.ibb.co/PMfvDmf/gold.png"
+  },
+  {
+    "id": 4,
+    "name": "Outdoor Adventure Birthday",
+    "price": "$799.99",
+    "recommendedFor": "10-15 participants",
+    "includedServices": [
+      "Outdoor Venue",
+      "Adventure Activities (e.g., Zip-lining, Treasure Hunt)",
+      "BBQ Catering",
+      "Custom Cake"
+    ],
+    "description": "Experience the thrill of an outdoor adventure with our Outdoor Adventure Birthday package. It includes an outdoor venue, exciting activities like zip-lining and treasure hunts......",
+    "detailed_description": "Experience the thrill of an outdoor adventure with our Outdoor Adventure Birthday package. It includes an outdoor venue, exciting activities like zip-lining and treasure hunts, BBQ catering, and a custom cake for a memorable celebration in the great outdoors.",
+    "image": "https://i.ibb.co/cQq6NbG/platinum.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Teenage Birthday Bash",
+    "price": "$499.99",
+    "recommendedFor": "15-20 teenagers",
+    "includedServices": [
+      "Teen-Friendly Decor",
+      "DJ and Dance Floor",
+      "Pizza and Snacks",
+      "Photo Booth",
+      "Party Favors"
+    ],
+    "description": "Host a cool and fun-filled Teenage Birthday Bash with our specially designed package. It includes teen-friendly decor, a DJ and dance floor, pizza and snacks, a photo booth, and party favors for a birthday party that teenagers will love.",
+    "detailed_description": "Host a cool and fun-filled Teenage Birthday Bash with our specially designed package. It includes teen-friendly decor, a DJ and dance floor, pizza and snacks, a photo booth, and party favors for a birthday party that teenagers will love.",
+    "image": "https://i.ibb.co/YNVgqDc/diamond.png"
+  },
+  {
+    "id": 6,
+    "name": "Luxury VIP Birthday Experience",
+    "price": "$2,499.99",
+    "recommendedFor": "30+ participants",
+    "includedServices": [
+      "Red Carpet Entrance",
+      "VIP Lounge",
+      "Gourmet Dining",
+      "Live Entertainment",
+      "Exclusive Decor",
+      "Customized Cake"
+    ],
+    "description": "Indulge in the ultimate Luxury VIP Birthday Experience. This exclusive package offers a red carpet entrance, VIP lounge, gourmet dining, live entertainment, exclusive decor, and a customized cake for a birthday celebration fit for VIPs.",
+    "detailed_description": "Indulge in the ultimate Luxury VIP Birthday Experience. This exclusive package offers a red carpet entrance, VIP lounge, gourmet dining, live entertainment, exclusive decor, and a customized cake for a birthday celebration fit for VIPs.",
+    "image": "https://i.ibb.co/pLwLnyn/VIP.png"
+  }
+]
