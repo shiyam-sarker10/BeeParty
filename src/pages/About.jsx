@@ -1,3 +1,5 @@
+import MeetOurTeam from "../Components/MeetOurTeam/MeetOurTeam";
+import OurMission from "../Components/Our Mission/OurMission";
 import OurHistory from "../Components/OurHistory/OurHistory";
 import WhoWeAre from "../Components/whoWeAre/WhoWeAre";
 
@@ -7,6 +9,8 @@ const About = () => {
         <div className="home-bg">
             <WhoWeAre></WhoWeAre>
             <OurHistory></OurHistory>
+            <MeetOurTeam></MeetOurTeam>
+            <OurMission></OurMission>
         </div>
     );
 };
