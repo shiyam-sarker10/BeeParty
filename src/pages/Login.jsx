@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SocialLogin from "../Components/SocialLogin/SocialLogin";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 
 const Login = () => {
 
-  
+  const navigate = useNavigate()
  const { userSignIn } = useContext(AuthContext);
   const handleSubmitLogin = (e) => {
 
@@ -15,7 +15,9 @@ const Login = () => {
     const password = e.target.password.value;
     userSignIn(email,password)
     .then((result)=>{
+      navigate("/");
       toast.success("Login Successfully")
+      
     })
     .catch((error) => {
       toast.error(`${error}`);

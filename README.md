@@ -1,8 +1,6 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ #### 5 Features Of mt website
+ - The first Feature is people can sign up and login in my website
+ - This website has some amazing toast that will get triggerd based on some conditions
+ - The third feature is logged user can read our blog posts
+ - The fourth feature is that  users can take our services for there birth day planing
+ - The fifth feature if the user is logged in they can see our service details

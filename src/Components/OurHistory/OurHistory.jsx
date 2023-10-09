@@ -5,7 +5,7 @@ const OurHistory = () => {
       <div className="my-20">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <div data-aos="fade-up-right" className=" md:w-[50%] relative">
+            <div data-aos="fade-down" className=" md:w-[50%] relative">
               <img
                 src="../../../src/assets/pop.gif"
                 className="absolute w-[100px] left-[180px] z-20 top-[25px]"
@@ -18,7 +18,7 @@ const OurHistory = () => {
               />
             </div>
             <div
-              data-aos="fade-up-left"
+              data-aos="fade-up"
               className=" space-y-4 w-full md:w-[50%]"
             >
               <h3 className=" font-custom  text-right md:w-[80%] text-2xl text-[#FEBF05]">

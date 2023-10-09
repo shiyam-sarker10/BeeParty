@@ -4,9 +4,10 @@ import './index.css'
 import { RouterProvider } from 'react-router-dom'
 import router from './route/Router'
   
+
+import AuthProvider from './AuthProvider/AuthProvider'
 import AOS from "aos";
 import "aos/dist/aos.css";
-import AuthProvider from './AuthProvider/AuthProvider'
 AOS.init();
 
 

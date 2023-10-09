@@ -21,7 +21,7 @@ const WhyChooseUs = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
               <div
-                data-aos="fade-left"
+                data-aos="fade-up"
                 className=" bg-[#f6f6f6] shadow-md space-y-4 p-10 rounded-xl flex flex-col justify-center items-center"
               >
                 <div className="bg-white p-5 rounded-full flex justify-center items-center">
@@ -65,7 +65,7 @@ const WhyChooseUs = () => {
                 </button>
               </div>
               <div
-                data-aos="fade-right"
+                data-aos="fade-down"
                 className=" bg-[#f6f6f6] shadow-md space-y-4 p-10 rounded-xl flex flex-col justify-center items-center"
               >
                 <div className="bg-white p-5 rounded-full flex justify-center items-center">

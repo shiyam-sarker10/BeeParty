@@ -21,7 +21,7 @@ const OurHappyParents = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
-            <div data-aos="fade-left" className="shadow-md ">
+            <div data-aos="fade-down" className="shadow-md ">
               <div className="bg-[#F6F6F6] tracking-wider rounded-t-xl text-gray-500 font-custom text-xl p-10">
                 Beeparty made our childs birthday unforgettable! The attention
                 to detail and creative ideas were exceptional.
@@ -59,7 +59,7 @@ const OurHappyParents = () => {
                 </div>
               </div>
             </div>
-            <div data-aos="fade-right" className="shadow-md rounded-xl">
+            <div data-aos="fade-up" className="shadow-md rounded-xl">
               <div className="bg-[#F6F6F6] tracking-wider rounded-t-xl text-gray-500 font-custom text-xl p-10">
                 Exceptional service! Beeparty&apos;s team ensured everything ran
                 smoothly. Our child&apos;s birthday was a hit

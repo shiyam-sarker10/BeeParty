@@ -1,7 +1,31 @@
+import { FaMapMarker,FaPhone,FaEnvelope } from 'react-icons/fa';
 const Contact = () => {
   return (
     <div>
       <div className="container my-24 mx-auto md:px-6">
+        <div className="flex flex-wrap justify-center gap-6 items-center">
+          <div className="bg-[#ABCE4E] p-10 rounded-xl">
+            <div className="flex flex-col items-center space-y-4">
+              <FaMapMarker className="text-white text-4xl" />
+              <h2 className="text-white font-title text-2xl">Location</h2>
+              <p className="text-white"> Uttara , dhaka-1230, Bangladesh</p>
+            </div>
+          </div>
+          <div className="bg-[#ff2f2f] p-10 rounded-xl">
+            <div className="flex flex-col items-center space-y-4">
+              <FaPhone className="text-white text-4xl" />
+              <h2 className="text-white font-title text-2xl">Contact</h2>
+              <p className="text-white"> lets talk : +8801908563177</p>
+            </div>
+          </div>
+          <div className="bg-[#ABCE4E] p-10 rounded-xl">
+            <div>
+              <FaEnvelope className="text-white text-4xl" />
+              <h2 className="text-white font-title text-2xl">Online</h2>
+              <p className="text-white"> Email : shiyam0sarker@gmail.com</p>
+            </div>
+          </div>
+        </div>
         <section className="mb-32">
           <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
             <div className="max-w-xl mx-auto">

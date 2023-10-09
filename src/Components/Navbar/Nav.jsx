@@ -69,6 +69,34 @@ const Nav = () => {
           Contact
         </NavLink>
       </li>
+      <li className="block py-2  text-orange-900 font-semibold font-custom tracking-widest">
+        <NavLink
+          to="/booking"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? " border-b-4 border-[#FEBF05] px-2 py-1 text-white "
+              : ""
+          }
+        >
+          Booking
+        </NavLink>
+      </li>
+      <li className="block py-2  text-orange-900 font-semibold font-custom tracking-widest">
+        <NavLink
+          to="/blogs"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? " border-b-4 border-[#FEBF05] px-2 py-1 text-white "
+              : ""
+          }
+        >
+          Blogs
+        </NavLink>
+      </li>
     </>
   );
 
@@ -152,7 +180,7 @@ const Nav = () => {
                       <button
                         onClick={handleLogOut}
                         type="button"
-                        className="text-white   hidden md:inline-block bg-[#FEBF05] hover:bg-[#FEBF05] focus:ring-4 focus:outline-none focus:ring-[#FEBF05]/40 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-[#FEBF05] dark:hover:bg-[#FEBF05] dark:focus:ring-[#FEBF05]/70"
+                        className="text-white font-bold   hidden md:inline-block bg-[#FEBF05] hover:bg-[#FEBF05] focus:ring-4 focus:outline-none focus:ring-[#FEBF05]/40  rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-[#FEBF05] dark:hover:bg-[#FEBF05] dark:focus:ring-[#FEBF05]/70"
                       >
                         LogOut
                       </button>

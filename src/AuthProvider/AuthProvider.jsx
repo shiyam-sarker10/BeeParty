@@ -27,10 +27,12 @@ const AuthProvider = ({children}) => {
   const [loading, setLoading] = useState(true);
 
 const CreateUser = (email, password) => {
+  setLoading(true);
       return createUserWithEmailAndPassword(auth, email, password);
 };
 
 const userSignIn = (email, password) => {
+  setLoading(true);
   return signInWithEmailAndPassword(auth, email, password);
 };
 
@@ -70,17 +72,6 @@ useEffect(() => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
     const authInfo = {
       GoogleSignIn,
       GithubSignIn,
@@ -89,6 +80,7 @@ useEffect(() => {
       user,
       logOut,
       UserUpdate,
+      loading
     };
     return (
       <div>
