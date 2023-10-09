@@ -1,13 +1,29 @@
-import  { useState } from "react";
+
+import { useContext, useState } from "react";
 import logo from "../../../src/assets/logo-white.png";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+
 
 const Nav = () => {
+  const { user, logOut } = useContext(AuthContext);
   const [menuOpen, setMenuOpen] = useState(false);
+
+
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+  const handleLogOut= () => {
+    logOut()
+    .then((result) => {
+      console.log(result);
+    })
+    .catch ((error)=>{
+      error
+    })
+  }
+
   const navLinks = (
     <>
       <li className="block py-2  text-orange-900 font-semibold font-custom tracking-widest">
@@ -38,20 +54,7 @@ const Nav = () => {
           About
         </NavLink>
       </li>
-      <li className="block py-2  text-orange-900 font-semibold font-custom tracking-widest">
-        <NavLink
-          to="/services"
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending"
-              : isActive
-              ? "border-b-4 border-[#FEBF05] px-2 py-1 text-white "
-              : ""
-          }
-        >
-          Services
-        </NavLink>
-      </li>
+      
       <li className="block py-2  text-orange-900 font-semibold font-custom tracking-widest">
         <NavLink
           to="/contact"
@@ -79,14 +82,26 @@ const Nav = () => {
             </a>
 
             <div className="md:hidden flex items-center">
-              <Link to="/login">
-                <button
-                  type="button"
-                  className="text-white bg-[#FEBF05] hover:bg-[#FEBF05] focus:ring-4 focus:outline-none focus:ring-[#FEBF05]/40 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-[#FEBF05] dark:hover:bg-[#FEBF05] dark:focus:ring-[#FEBF05]/70"
-                >
-                  Login
-                </button>
-              </Link>
+              {user ? (
+                
+                  <button
+                    onClick={handleLogOut}
+                    type="button"
+                    className="text-white bg-[#FEBF05] hover:bg-[#FEBF05] focus:ring-4 focus:outline-none focus:ring-[#FEBF05]/40 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-[#FEBF05] dark:hover:bg-[#FEBF05] dark:focus:ring-[#FEBF05]/70"
+                  >
+                    LogOut
+                  </button>
+                
+              ) : (
+                <Link to="/login">
+                  <button
+                    type="button"
+                    className="text-white bg-[#FEBF05] hover:bg-[#FEBF05] focus:ring-4 focus:outline-none focus:ring-[#FEBF05]/40 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-[#FEBF05] dark:hover:bg-[#FEBF05] dark:focus:ring-[#FEBF05]/70"
+                  >
+                    Login
+                  </button>
+                </Link>
+              )}
               <button
                 type="button"
                 className="text-white bg-[#FEBF05] hover:bg-[#FEBF05] focus:ring-4 focus:outline-none focus:ring-[#FEBF05]/40 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-[#FEBF05] dark:hover:bg-[#FEBF05] dark:focus:ring-[#FEBF05]/70"
@@ -122,14 +137,36 @@ const Nav = () => {
               <ul className="flex flex-col items-center md:flex-row p-4 md:p-0 mt-4 font-medium md:space-x-8 md:mt-0  dark:bg-gray-800 md:dark:bg-gray-900 ">
                 {navLinks}
                 <li>
-                  <Link to="/login">
-                    <button
-                      type="button"
-                      className="text-white  hidden md:inline-block bg-[#FEBF05] hover:bg-[#FEBF05] focus:ring-4 focus:outline-none focus:ring-[#FEBF05]/40 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-[#FEBF05] dark:hover:bg-[#FEBF05] dark:focus:ring-[#FEBF05]/70"
-                    >
-                      Login
-                    </button>
-                  </Link>
+                  {user ? (
+                    <div className="flex flex-wrap items-center gap-4">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <img
+                          className="w-[50px] rounded-full"
+                          src={user.photoURL}
+                          alt="User Profile"
+                        />
+                        <p className="text-white font-custom tracking-[2px] font-semibold">
+                          {user.displayName}
+                        </p>
+                      </div>
+                      <button
+                        onClick={handleLogOut}
+                        type="button"
+                        className="text-white   hidden md:inline-block bg-[#FEBF05] hover:bg-[#FEBF05] focus:ring-4 focus:outline-none focus:ring-[#FEBF05]/40 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-[#FEBF05] dark:hover:bg-[#FEBF05] dark:focus:ring-[#FEBF05]/70"
+                      >
+                        LogOut
+                      </button>
+                    </div>
+                  ) : (
+                    <Link to="/login">
+                      <button
+                        type="button"
+                        className="text-white   hidden md:inline-block bg-[#FEBF05] hover:bg-[#FEBF05] focus:ring-4 focus:outline-none focus:ring-[#FEBF05]/40 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-[#FEBF05] dark:hover:bg-[#FEBF05] dark:focus:ring-[#FEBF05]/70"
+                      >
+                        Login
+                      </button>
+                    </Link>
+                  )}
                 </li>
               </ul>
             </div>
@@ -139,5 +176,7 @@ const Nav = () => {
     </div>
   );
 };
+
+
 
 export default Nav;

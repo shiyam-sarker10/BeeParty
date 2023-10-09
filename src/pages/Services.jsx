@@ -1,9 +1,9 @@
-import { useLoaderData } from "react-router-dom";
-import ServiceCard from "../Components/ServiceCard/ServiceCard";
-import Wishing from "../Components/Wishing/Wishing";
 
-const Services = () => {
-  const serviceData = useLoaderData();
+import ServiceCard from "../Components/ServiceCard/ServiceCard";
+import Wishing from './../Components/Wishing/Wishing';
+
+const Services = ({serviceData}) => {
+ 
   const { id, name, price, description, image } = serviceData;
 
   return (
@@ -28,8 +28,11 @@ const Services = () => {
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
-                {serviceData.map((serviceInfo) => (
-                  <ServiceCard key={id} serviceInfo={serviceInfo}></ServiceCard>
+                {serviceData.map((serviceInfo, index) => (
+                  <ServiceCard
+                    key={index}
+                    serviceInfo={serviceInfo}
+                  ></ServiceCard>
                 ))}
               </div>
               <Wishing></Wishing>

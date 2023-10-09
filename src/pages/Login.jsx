@@ -1,6 +1,29 @@
 import { Link } from "react-router-dom";
+import SocialLogin from "../Components/SocialLogin/SocialLogin";
+import { useContext } from "react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Login = () => {
+
+  
+ const { userSignIn } = useContext(AuthContext);
+  const handleSubmitLogin = (e) => {
+
+    e.preventDefault()
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    userSignIn(email,password)
+    .then((result)=>{
+      toast.success("Login Successfully")
+    })
+    .catch((error) => {
+      toast.error(`${error}`);
+    })
+
+
+  
+  }
   return (
     <div className="flex flex-col md:flex-row-reverse items-center justify-center container mx-auto">
       <div className=" w-full md:w-[60%] flex justify-start">
@@ -21,7 +44,11 @@ const Login = () => {
                 <h1 className="text-xl font-bold leading-tight tracking-wider font-custom text-[#FEBF05] md:text-2xl dark:text-white">
                   Sign in to your account
                 </h1>
-                <form className="space-y-4 md:space-y-6" action="#">
+                <form
+                  onSubmit={handleSubmitLogin}
+                  className="space-y-4 md:space-y-6"
+                  action="#"
+                >
                   <div>
                     <label className="block mb-2 text-sm font-medium  dark:text-white">
                       Your email
@@ -85,25 +112,16 @@ const Login = () => {
                       or
                     </span>
                   </div>
-                  <div className="flex justify-center">
-                    <button className="px-4 py-2 border flex gap-2 border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150">
-                      <img
-                        className="w-6 h-6"
-                        src="https://www.svgrepo.com/show/475656/google-color.svg"
-                        loading="lazy"
-                        alt="google logo"
-                      />
-                      <span className="text-gray-500">Login with Google</span>
-                    </button>
-                  </div>
-                 
+
+                    <SocialLogin></SocialLogin>
+
                   <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                     Don’t have an account yet?{" "}
                     <Link
                       to="/register"
                       className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                     >
-                      Sign up
+                      Register now
                     </Link>
                   </p>
                 </form>

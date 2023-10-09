@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Basic Birthday Package",
     "price": "$299.99",
-    "recommendedFor": "10-15 participants",
+    "recommendedFor": 10,
     "includedServices": [
       "Standard Decoration",
       "Classic Birthday Cake",
@@ -17,7 +17,7 @@
     "id": 2,
     "name": "Deluxe Birthday Package",
     "price": "$599.99",
-    "recommendedFor": "15-20 participants",
+    "recommendedFor": 20,
     "includedServices": [
       "Premium Decoration",
       "Customized Birthday Cake",
@@ -32,7 +32,7 @@
     "id": 3,
     "name": "Themed Birthday Extravaganza",
     "price": "$999.99",
-    "recommendedFor": "20-30 participants",
+    "recommendedFor": 30,
     "includedServices": [
       "Themed Decoration",
       "Elaborate Birthday Cake",
@@ -48,7 +48,7 @@
     "id": 4,
     "name": "Outdoor Adventure Birthday",
     "price": "$799.99",
-    "recommendedFor": "10-15 participants",
+    "recommendedFor": 15,
     "includedServices": [
       "Outdoor Venue",
       "Adventure Activities (e.g., Zip-lining, Treasure Hunt)",
@@ -63,7 +63,7 @@
     "id": 5,
     "name": "Teenage Birthday Bash",
     "price": "$499.99",
-    "recommendedFor": "15-20 teenagers",
+    "recommendedFor": 25,
     "includedServices": [
       "Teen-Friendly Decor",
       "DJ and Dance Floor",
@@ -79,7 +79,7 @@
     "id": 6,
     "name": "Luxury VIP Birthday Experience",
     "price": "$2,499.99",
-    "recommendedFor": "30+ participants",
+    "recommendedFor": 30,
     "includedServices": [
       "Red Carpet Entrance",
       "VIP Lounge",

@@ -1,139 +1,192 @@
-import { Link } from "react-router-dom";
+
+import { Link, useNavigate } from "react-router-dom";
+import SocialLogin from "../Components/SocialLogin/SocialLogin";
+import { toast } from "react-toastify";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+import { useContext } from "react";
+
 
 const Register = () => {
-    return (
-        <div className="flex flex-col my-20 md:flex-row items-center justify-center container mx-auto">
-      <div className=" flex justify-start">
-        <img src="../../src/assets/register.gif" alt="login gif" />
-      </div>
-      <div className="   justify-end">
-        <section className=" dark:bg-gray-900">
-          <div className="flex flex-col items-center justify-center w-[500px] py-8 mx-auto md:h-screen lg:py-0">
+
+const { CreateUser, logOut, UserUpdate } = useContext(AuthContext);
+const loginNavigate = useNavigate()
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    const name = e.target.name.value;
+    const photo = e.target.photo.value;
+    const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    if (password.length < 6) {
+      toast.error("Password must be at least 6 characters long");
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      toast.error("Password must contain 1 capital letter ");
+      return;
+    }
+    else if (!specialChars.test(password)){
+      toast.error("Password must contain 1 spacial  character ");
+      return;
+    } 
+    else {
+      
+      CreateUser(email, password)
+        .then((result) => {
           
-            <div className="w-full bg-white rounded-lg shadow-lg dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
-              <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-                <h1 className="text-xl font-bold leading-tight tracking-wider font-custom text-[#FEBF05] md:text-2xl dark:text-white">
-                  Create your own  account
-                </h1>
-                <form className="space-y-4 md:space-y-6" action="#">
-                  <div>
-                    <label className="block mb-2 text-sm font-medium  dark:text-white">
-                      Your User Name
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      className=" focus:text-[#FEBF05] focus:outline-[#FEBF05] bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="name"
-                      required=""
-                    />
-                  </div>
-                  <div>
-                    <label className="block mb-2 text-sm font-medium  dark:text-white">
-                      Your Photo-Url
-                    </label>
-                    <input
-                      type="text"
-                      name="photo"
-                      id="photo"
-                      className=" focus:text-[#FEBF05] focus:outline-[#FEBF05] bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="url"
-                      required=""
-                    />
-                  </div>
-                  <div>
-                    <label className="block mb-2 text-sm font-medium  dark:text-white">
-                      Your email
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      className=" focus:text-[#FEBF05] focus:outline-[#FEBF05] bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="name@company.com"
-                      required=""
-                    />
-                  </div>
-                  <div>
-                    <label className="block mb-2 text-sm font-medium  dark:text-white">
-                      Password
-                    </label>
-                    <input
-                      type="password"
-                      name="password"
-                      id="password"
-                      placeholder="••••••••"
-                      className=" focus:text-[#FEBF05] focus:outline-[#FEBF05] bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      required=""
-                    />
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-start">
-                      <div className="flex items-center h-5">
-                        <input
-                          id="remember"
-                          aria-describedby="remember"
-                          type="checkbox"
-                          className=" form-checkbox  text-[#FEBF05] w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
-                          required=""
-                        />
-                      </div>
-                      <div className="ml-3 text-sm">
-                        <label className="text-gray-500 dark:text-gray-300">
-                          Remember me
-                        </label>
-                      </div>
-                    </div>
-                    <a
-                      href="#"
-                      className="text-sm font-medium text-gray-400 hover:underline dark:text-primary-500"
-                    >
-                      Forgot password?
-                    </a>
-                  </div>
-                  <div className="flex justify-center items-center ">
-                    <input
-                      className="px-6 w-full py-2 rounded-lg font-thin active:bg-[#FEBF05]/80 bg-[#FEBF05] text-white font-title "
-                      type="submit"
-                      value="Submit"
-                    />
-                  </div>
-                  <div className="inline-flex items-center justify-center w-full relative">
-                    <hr className="w-64 h-px my-4 bg-gray-200 border-0 dark:bg-gray-700" />
-                    <span className="absolute px-3 font-medium  -translate-x-1/2 bg-white left-1/2 dark:text-white text-[#FEBF05] dark:bg-gray-900">
-                      or
-                    </span>
-                  </div>
-                  <div className="flex justify-center">
-                    <button className="px-4 py-2 border flex gap-2 border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150">
-                      <img
-                        className="w-6 h-6"
-                        src="https://www.svgrepo.com/show/475656/google-color.svg"
-                        loading="lazy"
-                        alt="google logo"
+          toast.success("SuccessFully registered");
+          UserUpdate(name, photo)
+            .then(() => {
+              loginNavigate("/login")
+            })
+            .catch(() => {});
+          logOut()
+          .then(()=>{})
+          .catch(()=>{})
+
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
+      
+      
+    }
+
+    
+    
+  };
+  return (
+    <>
+      <div className="flex flex-col my-20 md:flex-row items-center justify-center container mx-auto">
+        <div className=" flex justify-start">
+          <img src="../../src/assets/register.gif" alt="login gif" />
+        </div>
+        <div className="   justify-end">
+          <section className=" dark:bg-gray-900">
+            <div className="flex flex-col items-center justify-center w-[500px] py-8 mx-auto md:h-screen lg:py-0">
+              <div className="w-full bg-white rounded-lg shadow-lg dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+                <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
+                  <h1 className="text-xl font-bold leading-tight tracking-wider font-custom text-[#FEBF05] md:text-2xl dark:text-white">
+                    Create your own account
+                  </h1>
+                  <form
+                    onSubmit={handleSubmit}
+                    className="space-y-4 md:space-y-6"
+                    action="#"
+                  >
+                    <div>
+                      <label className="block mb-2 text-sm font-medium  dark:text-white">
+                        Your User Name
+                      </label>
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        className=" focus:text-[#FEBF05] focus:outline-[#FEBF05] bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="name"
+                        required=""
                       />
-                      <span className="text-gray-500">Login with Google</span>
-                    </button>
-                  </div>
-                 
-                  <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                    Already have an account ?{" "}
-                    <Link
-                      to="/login"
-                      className="font-medium text-primary-600 hover:underline dark:text-primary-500"
-                    >
-                      Sign In
-                    </Link>
-                  </p>
-                </form>
+                    </div>
+                    <div>
+                      <label className="block mb-2 text-sm font-medium  dark:text-white">
+                        Your Photo-Url
+                      </label>
+                      <input
+                        type="text"
+                        name="photo"
+                        id="photo"
+                        className=" focus:text-[#FEBF05] focus:outline-[#FEBF05] bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="url"
+                        required=""
+                      />
+                    </div>
+                    <div>
+                      <label className="block mb-2 text-sm font-medium  dark:text-white">
+                        Your email
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        className=" focus:text-[#FEBF05] focus:outline-[#FEBF05] bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="name@company.com"
+                        required=""
+                      />
+                    </div>
+                    <div>
+                      <label className="block mb-2 text-sm font-medium  dark:text-white">
+                        Password
+                      </label>
+                      <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="••••••••"
+                        className=" focus:text-[#FEBF05] focus:outline-[#FEBF05] bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        required=""
+                      />
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-start">
+                        <div className="flex items-center h-5">
+                          <input
+                            id="remember"
+                            aria-describedby="remember"
+                            type="checkbox"
+                            className=" form-checkbox  text-[#FEBF05] w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
+                            required=""
+                          />
+                        </div>
+                        <div className="ml-3 text-sm">
+                          <label className="text-gray-500 dark:text-gray-300">
+                            Remember me
+                          </label>
+                        </div>
+                      </div>
+                      <a
+                        href="#"
+                        className="text-sm font-medium text-gray-400 hover:underline dark:text-primary-500"
+                      >
+                        Forgot password?
+                      </a>
+                    </div>
+                    <div className="flex justify-center items-center ">
+                      <input
+                        className="px-6 w-full py-2 rounded-lg font-thin active:bg-[#FEBF05]/80 bg-[#FEBF05] text-white font-title "
+                        type="submit"
+                        value="Submit"
+                      />
+                    </div>
+                    <div className="inline-flex items-center justify-center w-full relative">
+                      <hr className="w-64 h-px my-4 bg-gray-200 border-0 dark:bg-gray-700" />
+                      <span className="absolute px-3 font-medium  -translate-x-1/2 bg-white left-1/2 dark:text-white text-[#FEBF05] dark:bg-gray-900">
+                        or
+                      </span>
+                    </div>
+                    <div className="flex justify-center">
+                      <SocialLogin></SocialLogin>
+                    </div>
+
+                    <p className="text-sm font-light text-gray-500 dark:text-gray-400">
+                      Already have an account ?{" "}
+                      <Link
+                        to="/login"
+                        className="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                      >
+                        Sign In
+                      </Link>
+                    </p>
+                  </form>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
-    </div>
-    );
+    </>
+  );
 };
 
 export default Register;
